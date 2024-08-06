@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="style.css">
+        <script src="app.js" defer></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
+        
+		<title>Users List</title>
+	</head>
+	<body>
+        
+            <div class="title">
+                <h2>Users List</h2>
+            </div>
+            <div class="container">
+                <ul class="responsive-table">
+                    <li class="table-header">
+                        <div class="col col-1">User Id</div>
+                        <div class="col col-2">Forename</div>
+                        <div class="col col-3">Surname</div>
+                        <div class="col col-4">Phone number</div>
+                        <div class="col col-5">City</div>
+                    </li> 
+                    <div class="result"></div> 
+                </ul>     
+                <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+            </div>
+           
+        <script id="template" type="text/x-handlebars-template">
+            <!-- Template pour afficher les données récupérées via Ajax  -->
+            <li class="table-row">
+                <div class="image"><img class="profile-picture" src="profile.jpg" alt="generic profile picture" /></div>
+                <div class="col col-1" data-label="User Id">{{id}}</div>
+                <div class="col col-2" data-label="Forename">{{forename}}</div>
+                <div class="col col-3" data-label="Surname">{{surname}}</div>
+                <div class="col col-4" data-label="Phone number">{{phone}}</div>
+                <div class="col col-5" data-label="City">{{city}}</div>
+            </li>
+        </script>
+
+    </body>
+</html>
